@@ -30,7 +30,6 @@ function initStartupScreens() {
 }
 initStartupScreens();
 
-const portalOverlay = document.getElementById("portal-overlay");
 const lockPanel = document.getElementById("lock-panel");
 const lockDateInput = document.getElementById("lock-date-input");
 const lockErrorMsg = document.getElementById("lock-error-msg");
@@ -55,7 +54,6 @@ const lightboxClose = document.getElementById("lightbox-close");
 
 const btnYes = document.getElementById("btn-yes");
 const btnNo = document.getElementById("btn-no");
-const btnBack = document.getElementById("btn-back");
 const btnGoAway = document.getElementById("btn-go-away");
 const musicToggleBtn = document.getElementById("music-toggle-btn");
 
@@ -75,33 +73,25 @@ btnNo.addEventListener("click", () => {
   activeScreen = "security";
 });
 
-btnBack.addEventListener("click", () => {
+btnGoAway.addEventListener("click", () => {
   transitionScreens(screenSecurity, screenVerify);
   activeScreen = "verify";
-});
-
-btnGoAway.addEventListener("click", () => {
-  // Safe redirection
-  window.location.href = "https://www.google.com";
 });
 
 btnYes.addEventListener("click", () => {
   // Start music on user gesture
   initAndStartMusic();
   
-  // Cinematic portal transition to lock screen
-  portalOverlay.classList.add("active");
+  // Cross-fade: Fade in lock screen immediately while zooming out verify screen
+  screenLock.classList.remove("hidden");
+  screenVerify.classList.add("zoom-out-fade");
   
   setTimeout(() => {
     screenVerify.classList.add("hidden");
-    screenLock.classList.remove("hidden");
+    screenVerify.classList.remove("zoom-out-fade");
     activeScreen = "lock";
     lockDateInput.focus();
-  }, 1000);
-
-  setTimeout(() => {
-    portalOverlay.classList.remove("active");
-  }, 1800);
+  }, 600);
 });
 
 function transitionScreens(fromScreen, toScreen) {

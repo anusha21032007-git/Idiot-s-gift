@@ -44,8 +44,7 @@
   <!-- Confetti / Fireworks Canvas -->
   <canvas id="celebration-canvas"></canvas>
 
-  <!-- Portal Transition Overlay -->
-  <div class="portal-overlay" id="portal-overlay"></div>
+
 
   <!-- Page 1: Verify User -->
   <div class="screen" id="screen-verify">
@@ -108,45 +107,12 @@
   <!-- Page 1b: Security Screen -->
   <div class="screen hidden" id="screen-security">
     <div class="glass-panel" style="border-color: rgba(255, 101, 163, 0.3);">
-      <div class="security-guard-container">
-        <!-- Dog / Cat Guard SVG -->
-        <svg class="guard-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="guard-fur" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#555" />
-              <stop offset="100%" stop-color="#222" />
-            </linearGradient>
-          </defs>
-          <!-- Ears -->
-          <path d="M25,30 L10,55 L40,50 Z" fill="#333" />
-          <path d="M95,30 L110,55 L80,50 Z" fill="#333" />
-          <!-- Inner Ears -->
-          <path d="M23,35 L15,50 L35,47 Z" fill="#ffc0cb" />
-          <path d="M97,35 L105,50 L85,47 Z" fill="#ffc0cb" />
-          <!-- Head/Face -->
-          <circle cx="60" cy="65" r="40" fill="url(#guard-fur)" />
-          <!-- Muzzle -->
-          <ellipse cx="60" cy="75" rx="18" ry="12" fill="#e0e0e0" />
-          <!-- Nose -->
-          <polygon points="54,72 66,72 60,78" fill="#111" />
-          <!-- Security Hat -->
-          <path d="M30,35 L90,35 L80,18 L40,18 Z" fill="#1a237e" />
-          <rect x="35" y="31" width="50" height="5" fill="#ffd700" />
-          <polygon points="60,20 64,28 56,28" fill="#ffd700" />
-          <!-- Sunglasses (Cool Guard) -->
-          <rect x="28" y="52" width="28" height="15" rx="5" fill="#111" />
-          <rect x="64" y="52" width="28" height="15" rx="5" fill="#111" />
-          <rect x="52" y="57" width="16" height="4" fill="#111" />
-          <path d="M32,55 L45,55" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
-          <path d="M68,55 L81,55" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
-        </svg>
+      <div class="security-guard-container" style="font-size: 5rem; margin-bottom: 1.5rem;">
+        😎
       </div>
-      <h1 class="magical-title" style="background: linear-gradient(to right, #ffffff, #ff65a3);">Unauthorized Visitor
-        Detected 🚨</h1>
-      <p class="magical-subtitle">Why are you here? 👀</p>
+      <p class="magical-subtitle">Why are you here?👀<br>This is for Karthiiiii😁</p>
       <div class="button-group">
-        <button class="btn" id="btn-go-away">Go Away 😤</button>
-        <button class="btn btn-secondary" id="btn-back">Back 😅</button>
+        <button class="btn" id="btn-go-away">Go Away 🥱</button>
       </div>
     </div>
   </div>
@@ -180,14 +146,14 @@
       </div>
       <h1 class="magical-title">🔒 Birthday Surprise</h1>
       <p class="magical-subtitle" style="font-weight: 500; font-size: 1.15rem;">One special person was born on this
-        day... ❤️</p>
+        day...❤️</p>
       <p class="magical-subtitle">Enter the magic date to unlock their surprise ✨</p>
 
       <div class="date-input-group">
         <input type="text" class="date-input" id="lock-date-input" maxlength="5" placeholder="DD/MM" autocomplete="off"
           inputmode="numeric">
         <div class="date-hint">Input format: DD/MM (E.g. 25/12)</div>
-        <div class="error-message" id="lock-error-msg">That's not the magic date... 🎂</div>
+        <div class="error-message" id="lock-error-msg">That's not the magic date...🎂</div>
       </div>
 
     </div>
@@ -197,7 +163,7 @@
   <!-- Page 3: Memory Surprise Cards -->
   <div class="screen hidden" id="screen-gift3">
     <div class="glass-panel wide-panel" id="gift3-panel">
-      <h1 class="magical-title">🎁 Your Birthday Surprise Cards</h1>
+      <h1 class="magical-title">🎁Your Birthday Surprise Cards</h1>
       <p class="magical-subtitle">Open each card in order to reveal your surprises... ❤️</p>
 
       <div class="cards-row-container">
@@ -208,12 +174,12 @@
             <div class="gift-card-front">
               <div class="card-icon">❤️</div>
               <h3>Talktime Memories</h3>
-              <div class="card-status">Tap to Open 🎁</div>
+              <div class="card-status">Tap to Open🎁</div>
             </div>
             <!-- Back Face -->
             <div class="gift-card-back">
               <img src="talktime/talktimeee.jpg" alt="Talktime Memory" class="card-img">
-              <p class="card-quote">"These aren't just talktime memories, but those are the THERAPIES to my HEART ❤️"
+              <p class="card-quote">"These aren't just talktime memories, but those are the THERAPIES to my HEART❤️"
               </p>
               <button class="btn btn-sm card-complete-btn" id="btn-card1-complete">Done ✨</button>
             </div>
@@ -262,7 +228,7 @@
             <div class="gift-card-front">
               <div class="card-lock-overlay">🔒 Locked</div>
               <div class="card-icon">👶</div>
-              <h3>Little Karthi</h3>
+              <h3>Naughty Boy</h3>
               <div class="card-status">Locked</div>
             </div>
             <!-- Back Face -->

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This's for my fav Idiot✨❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- GSAP and Confetti CDNs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <link rel="icon" href="faviconn.png">
+</head>
+
+<body>
+
+  <!-- Starry Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-nebula"></div>
+
+  <!-- Floating Background Decorations -->
+  <div class="floating-decoration balloon-purple" style="left: 10%; bottom: -100px; width: 40px; height: 50px;">
+    <svg viewBox="0 0 30 40" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="15" cy="18" rx="12" ry="15" fill="#b19ffb" />
+      <polygon points="15,33 12,36 18,36" fill="#b19ffb" />
+      <path d="M15,36 Q13,42 16,48" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none" />
+    </svg>
+  </div>
+  <div class="floating-decoration balloon-pink" style="left: 85%; bottom: -120px; width: 45px; height: 55px;">
+    <svg viewBox="0 0 30 40" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="15" cy="18" rx="12" ry="15" fill="#ff65a3" />
+      <polygon points="15,33 12,36 18,36" fill="#ff65a3" />
+      <path d="M15,36 Q17,42 14,48" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none" />
+    </svg>
+  </div>
+  <div class="floating-decoration gift-decor" style="left: 75%; bottom: -150px; width: 35px; height: 35px;">
+    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+      <rect x="5" y="10" width="30" height="25" rx="2" fill="#ffd700" />
+      <rect x="3" y="5" width="34" height="7" rx="1" fill="#ff65a3" />
+      <rect x="18" y="5" width="4" height="30" fill="#ff65a3" />
+    </svg>
+  </div>
+
+  <!-- Confetti / Fireworks Canvas -->
+  <canvas id="celebration-canvas"></canvas>
+
+  <!-- Portal Transition Overlay -->
+  <div class="portal-overlay" id="portal-overlay"></div>
+
+  <!-- Page 1: Verify User -->
+  <div class="screen" id="screen-verify">
+    <div class="glass-panel">
+      <div class="glowing-box-container">
+        <!-- Background Sparkles -->
+        <svg class="sparkles-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(177, 159, 251, 0.15)" stroke-width="1"
+            stroke-dasharray="4 4" />
+          <path d="M50,15 L52,25 L62,25 L54,32 L57,42 L50,35 L43,42 L46,32 L38,25 L48,25 Z"
+            fill="rgba(255, 215, 0, 0.6)" transform="scale(0.4) translate(40, -10)" />
+          <path d="M50,15 L52,25 L62,25 L54,32 L57,42 L50,35 L43,42 L46,32 L38,25 L48,25 Z"
+            fill="rgba(177, 159, 251, 0.6)" transform="scale(0.3) translate(220, 100) rotate(45)" />
+          <path d="M50,15 L52,25 L62,25 L54,32 L57,42 L50,35 L43,42 L46,32 L38,25 L48,25 Z"
+            fill="rgba(255, 101, 163, 0.6)" transform="scale(0.3) translate(30, 180) rotate(15)" />
+        </svg>
+        <!-- Floating Gift Box -->
+        <div class="gift-box-wrapper" id="verify-gift-box">
+          <svg class="gift-box-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="box-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#b19ffb" />
+                <stop offset="100%" stop-color="#7f5feb" />
+              </linearGradient>
+              <linearGradient id="lid-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#d4c9ff" />
+                <stop offset="100%" stop-color="#9d84f9" />
+              </linearGradient>
+              <linearGradient id="ribbon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ff9ec5" />
+                <stop offset="100%" stop-color="#ff65a3" />
+              </linearGradient>
+            </defs>
+            <!-- Box Body -->
+            <rect x="25" y="45" width="70" height="60" rx="6" fill="url(#box-grad)" />
+            <!-- Box Lid -->
+            <rect x="20" y="32" width="80" height="18" rx="4" fill="url(#lid-grad)" />
+            <!-- Ribbon Vertical -->
+            <rect x="53" y="32" width="14" height="73" fill="url(#ribbon-grad)" />
+            <!-- Ribbon Horizontal -->
+            <rect x="25" y="66" width="70" height="14" fill="url(#ribbon-grad)" />
+            <!-- Bow Left Loop -->
+            <path d="M53,32 C40,15 30,30 53,32 Z" fill="url(#ribbon-grad)" />
+            <!-- Bow Right Loop -->
+            <path d="M67,32 C80,15 90,30 67,32 Z" fill="url(#ribbon-grad)" />
+            <!-- Bow Center Knot -->
+            <circle cx="60" cy="32" r="8" fill="#ff65a3" />
+          </svg>
+        </div>
+      </div>
+      <h1 class="magical-title">This page is specially made for Karthi ❤️</h1>
+      <p class="magical-subtitle">Are you Karthi?</p>
+      <div class="button-group">
+        <button class="btn" id="btn-yes">YES ✨</button>
+        <button class="btn btn-secondary" id="btn-no">NO 👀</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 1b: Security Screen -->
+  <div class="screen hidden" id="screen-security">
+    <div class="glass-panel" style="border-color: rgba(255, 101, 163, 0.3);">
+      <div class="security-guard-container">
+        <!-- Dog / Cat Guard SVG -->
+        <svg class="guard-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="guard-fur" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#555" />
+              <stop offset="100%" stop-color="#222" />
+            </linearGradient>
+          </defs>
+          <!-- Ears -->
+          <path d="M25,30 L10,55 L40,50 Z" fill="#333" />
+          <path d="M95,30 L110,55 L80,50 Z" fill="#333" />
+          <!-- Inner Ears -->
+          <path d="M23,35 L15,50 L35,47 Z" fill="#ffc0cb" />
+          <path d="M97,35 L105,50 L85,47 Z" fill="#ffc0cb" />
+          <!-- Head/Face -->
+          <circle cx="60" cy="65" r="40" fill="url(#guard-fur)" />
+          <!-- Muzzle -->
+          <ellipse cx="60" cy="75" rx="18" ry="12" fill="#e0e0e0" />
+          <!-- Nose -->
+          <polygon points="54,72 66,72 60,78" fill="#111" />
+          <!-- Security Hat -->
+          <path d="M30,35 L90,35 L80,18 L40,18 Z" fill="#1a237e" />
+          <rect x="35" y="31" width="50" height="5" fill="#ffd700" />
+          <polygon points="60,20 64,28 56,28" fill="#ffd700" />
+          <!-- Sunglasses (Cool Guard) -->
+          <rect x="28" y="52" width="28" height="15" rx="5" fill="#111" />
+          <rect x="64" y="52" width="28" height="15" rx="5" fill="#111" />
+          <rect x="52" y="57" width="16" height="4" fill="#111" />
+          <path d="M32,55 L45,55" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M68,55 L81,55" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </div>
+      <h1 class="magical-title" style="background: linear-gradient(to right, #ffffff, #ff65a3);">Unauthorized Visitor
+        Detected 🚨</h1>
+      <p class="magical-subtitle">Why are you here? 👀</p>
+      <div class="button-group">
+        <button class="btn" id="btn-go-away">Go Away 😤</button>
+        <button class="btn btn-secondary" id="btn-back">Back 😅</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 2: Birthday Lock Screen -->
+  <div class="screen hidden" id="screen-lock">
+    <div class="glass-panel" id="lock-panel">
+      <div class="lock-icon-container">
+        <!-- Magical Lock SVG -->
+        <svg class="lock-svg" id="magical-lock" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lock-body-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffd700" />
+              <stop offset="100%" stop-color="#b8860b" />
+            </linearGradient>
+          </defs>
+          <!-- Shackle (Top Hook) -->
+          <path id="lock-shackle" d="M30,50 L30,30 A20,20 0 0,1 70,30 L70,50" fill="none" stroke="#e6b800"
+            stroke-width="10" stroke-linecap="round" transition="transform 0.6s" />
+          <!-- Lock Body -->
+          <rect x="18" y="44" width="64" height="48" rx="12" fill="url(#lock-body-grad)" stroke="#d4af37"
+            stroke-width="2" />
+          <!-- Keyhole -->
+          <circle cx="50" cy="62" r="8" fill="#333" />
+          <polygon points="46,62 54,62 56,80 44,80" fill="#333" />
+          <!-- Heart Symbol inside Lock -->
+          <path
+            d="M50,56 C50,56 46,50 42,50 C38,50 35,53 35,57 C35,62 50,68 50,68 C50,68 65,62 65,57 C65,53 62,50 58,50 C54,50 50,56 50,56 Z"
+            fill="rgba(255, 101, 163, 0.8)" transform="scale(0.45) translate(62, 58)" />
+        </svg>
+      </div>
+      <h1 class="magical-title">🔒 Birthday Surprise</h1>
+      <p class="magical-subtitle" style="font-weight: 500; font-size: 1.15rem;">One special person was born on this
+        day... ❤️</p>
+      <p class="magical-subtitle">Enter the magic date to unlock their surprise ✨</p>
+
+      <div class="date-input-group">
+        <input type="text" class="date-input" id="lock-date-input" maxlength="5" placeholder="DD/MM" autocomplete="off"
+          inputmode="numeric">
+        <div class="date-hint">Input format: DD/MM (E.g. 25/12)</div>
+        <div class="error-message" id="lock-error-msg">That's not the magic date... 🎂</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Page 3: Memory Gift Box Screen -->
+  <!-- Page 3: Memory Surprise Cards -->
+  <div class="screen hidden" id="screen-gift3">
+    <div class="glass-panel wide-panel" id="gift3-panel">
+      <h1 class="magical-title">🎁 Your Birthday Surprise Cards</h1>
+      <p class="magical-subtitle">Open each card in order to reveal your surprises... ❤️</p>
+
+      <div class="cards-row-container">
+        <!-- Card 1 -->
+        <div class="gift-card" id="gift-card-1">
+          <div class="gift-card-inner">
+            <!-- Front Face -->
+            <div class="gift-card-front">
+              <div class="card-icon">❤️</div>
+              <h3>Talktime Memories</h3>
+              <div class="card-status">Tap to Open 🎁</div>
+            </div>
+            <!-- Back Face -->
+            <div class="gift-card-back">
+              <img src="talktime/talktimeee.jpg" alt="Talktime Memory" class="card-img">
+              <p class="card-quote">"These aren't just talktime memories, but those are the THERAPIES to my HEART ❤️"
+              </p>
+              <button class="btn btn-sm card-complete-btn" id="btn-card1-complete">Done ✨</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="gift-card locked" id="gift-card-2">
+          <div class="gift-card-inner">
+            <!-- Front Face -->
+            <div class="gift-card-front">
+              <div class="card-lock-overlay">🔒 Locked</div>
+              <div class="card-icon">🌙</div>
+              <h3>Kavidhai</h3>
+              <div class="card-status">Locked</div>
+            </div>
+            <!-- Back Face -->
+            <div class="gift-card-back">
+              <div class="poem-container">
+                <p class="poem-text">தகப்பனெனில் கடமை,
+                  தம்பியெனில் துடுக்குத்தனம்,
+                  அண்ணனெனில் ஆணவம்
+                  தடுத்திருக்கலாம்...
+                  அன்பை பகிர!
+
+                  ஆனால்,
+                  அனைத்தையும் ஒன்றிணைத்தது
+                  நம் நட்பு!❤️🩹
+
+                  தோழன் என்பதாலென்னவோ,
+                  மனதில் மறையாமல் தோன்றி மின்னுகிறாய்...💗
+
+                  என் அன்பு கிறுக்கு தோழனே...
+                  இனிய பிறந்தநாள்
+                  நல்வாழ்த்துக்கள்!🎂🎉❤️</p>
+              </div>
+              <button class="btn btn-sm card-complete-btn" id="btn-card2-complete">Done ✨</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="gift-card locked" id="gift-card-3">
+          <div class="gift-card-inner">
+            <!-- Front Face -->
+            <div class="gift-card-front">
+              <div class="card-lock-overlay">🔒 Locked</div>
+              <div class="card-icon">👶</div>
+              <h3>Little Karthi</h3>
+              <div class="card-status">Locked</div>
+            </div>
+            <!-- Back Face -->
+            <div class="gift-card-back">
+              <img src="kuttyyyy/kutyy.jpg" alt="Childhood Memory" class="card-img">
+              <p class="card-quote">✨ My favourite idiot's specialty:<br>😡 Annoy me<br>😏 Tease me<br>😅 Make me
+                laugh<br>🔄 Repeat<br>❤️ Forever</p>
+              <button class="btn btn-sm card-complete-btn" id="btn-card3-complete">Done ✨</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final button shown after Card 3 is completed -->
+      <div class="final-action-container hidden" id="final-action-container">
+        <button class="btn glow-btn" id="btn-gift3-continue">Continue to Final Surprise ✨</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 5: Final Wish Screen -->
+  <div class="screen hidden" id="screen-gift5">
+    <div class="glass-panel final-glass-panel">
+      <div class="final-img-container">
+        <img src="karthi/karthi.jpg" alt="Karthi" class="final-portrait-img">
+      </div>
+      <p class="final-quote">Before the world knew your strength,<br>This little smile was already carrying magic....✨❤️
+      </p>
+      <div class="final-message">
+        <h2>Happy Birthday, Karthi 🎂❤️</h2>
+        <p>Thank you for being one of the most beautiful chapters of my life.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Music Player Overlay Toggle -->
+  <button class="music-toggle-btn" id="music-toggle-btn" title="Toggle Magical Music">
+    <svg class="music-icon" viewBox="0 0 24 24">
+      <path d="M9 18V5l12-2v13"></path>
+      <circle cx="6" cy="18" r="3"></circle>
+      <circle cx="18" cy="16" r="3"></circle>
+    </svg>
+  </button>
+  <!-- Lightbox Modal for Photo Zoom -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <div class="lightbox-content-wrapper">
+      <img class="lightbox-img" id="lightbox-img" src="" alt="Zoomed Photo">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

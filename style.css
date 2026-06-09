@@ -124,8 +124,8 @@ p, h1, h2, h3, h4, h5, h6, span, div, a {
 }
 
 .btn:hover {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 12px 32px rgba(127, 95, 235, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(127, 95, 235, 0.4), 0 0 12px rgba(177, 159, 251, 0.3);
   background: linear-gradient(135deg, var(--light-purple), var(--primary-purple));
 }
 
@@ -141,9 +141,10 @@ p, h1, h2, h3, h4, h5, h6, span, div, a {
 }
 
 .btn-secondary:hover {
+  transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.08);
 }
 
 .button-group {
@@ -172,7 +173,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, a {
 .screen.zoom-out-fade {
   opacity: 0 !important;
   pointer-events: none !important;
-  transform: scale(1.05) !important;
+  transform: scale(1.03) !important;
 }
 
 .screen.hidden {
@@ -930,6 +931,18 @@ p.magical-subtitle {
   pointer-events: none !important;
   z-index: 9999 !important;
 }
+
+.footer-signature {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  margin-top: 1.5rem;
+  text-align: center;
+  letter-spacing: 1.2px;
+  font-weight: 300;
+}
+
 
 
 

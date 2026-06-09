@@ -82,6 +82,9 @@ btnYes.addEventListener("click", () => {
   // Start music on user gesture
   initAndStartMusic();
   
+  // Spawn a few magical sparkles
+  spawnTransitionSparkles();
+  
   // Cross-fade: Fade in lock screen immediately while zooming out verify screen
   screenLock.classList.remove("hidden");
   screenVerify.classList.add("zoom-out-fade");
@@ -608,9 +611,18 @@ function initGift3Handlers() {
     });
   });
 
+  let finalConfettiTriggered = false;
   btnGift3Continue.addEventListener("click", () => {
     transitionScreens(screenGift3, screenGift5);
     activeScreen = "gift5";
+    if (!finalConfettiTriggered) {
+      finalConfettiTriggered = true;
+      confetti({
+        particleCount: 45,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
   });
 }
 
@@ -686,10 +698,10 @@ function triggerMagicalParticles(anchor) {
 
   const colors = ['#b19ffb', '#ff65a3', '#ffd700', '#00ffff', '#ffffff'];
 
-  for (let i = 0; i < 45; i++) {
+  for (let i = 0; i < 25; i++) {
     const p = document.createElement("div");
     p.className = "magical-particle";
-    const size = Math.random() * 8 + 4;
+    const size = Math.random() * 6 + 3;
     p.style.width = `${size}px`;
     p.style.height = `${size}px`;
     p.style.background = colors[Math.floor(Math.random() * colors.length)];
@@ -699,7 +711,7 @@ function triggerMagicalParticles(anchor) {
     parent.appendChild(p);
 
     const angle = Math.random() * Math.PI * 2;
-    const velocity = Math.random() * 8 + 3;
+    const velocity = Math.random() * 6 + 2;
     const vx = Math.cos(angle) * velocity;
     const vy = Math.sin(angle) * velocity;
 
@@ -710,7 +722,7 @@ function triggerMagicalParticles(anchor) {
     function animate() {
       posX += vx;
       posY += vy;
-      opacity -= 0.02;
+      opacity -= 0.025;
       p.style.left = `${posX}px`;
       p.style.top = `${posY}px`;
       p.style.opacity = opacity;
@@ -719,6 +731,48 @@ function triggerMagicalParticles(anchor) {
         requestAnimationFrame(animate);
       } else {
         p.remove();
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+}
+
+// Spawns a few subtle sparkles floating upward during the YES transition
+function spawnTransitionSparkles() {
+  const colors = ['#b19ffb', '#ff65a3', '#ffd700', '#ffffff'];
+  for (let i = 0; i < 12; i++) {
+    const s = document.createElement("div");
+    s.className = "magical-particle";
+    const size = Math.random() * 4 + 2;
+    s.style.width = `${size}px`;
+    s.style.height = `${size}px`;
+    s.style.background = colors[Math.floor(Math.random() * colors.length)];
+    s.style.borderRadius = "50%";
+    s.style.left = `${Math.random() * 100}vw`;
+    s.style.top = `${Math.random() * 100}vh`;
+    s.style.opacity = "0.6";
+    s.style.filter = "blur(0.5px)";
+    document.body.appendChild(s);
+
+    const vx = (Math.random() - 0.5) * 2;
+    const vy = -Math.random() * 3 - 1;
+
+    let posX = parseFloat(s.style.left) / 100 * window.innerWidth;
+    let posY = parseFloat(s.style.top) / 100 * window.innerHeight;
+    let opacity = 0.6;
+
+    function animate() {
+      posX += vx;
+      posY += vy;
+      opacity -= 0.015;
+      s.style.left = `${posX}px`;
+      s.style.top = `${posY}px`;
+      s.style.opacity = opacity;
+
+      if (opacity > 0) {
+        requestAnimationFrame(animate);
+      } else {
+        s.remove();
       }
     }
     requestAnimationFrame(animate);
